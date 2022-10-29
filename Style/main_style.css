@@ -44,7 +44,7 @@ body {
 .countainer .weather-box {
   border-radius: 5%;
   background-color: rgba(15, 70, 101, 0.9);
-  color: rgb(3, 19, 32);
+  color: rgb(5, 32, 54);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,17 +78,18 @@ body {
   padding: 20px;
   font-size: var(--search-inut-box-input-font-size);
   background-color: transparent;
-  color: rgb(3, 19, 32);
+  color: rgb(5, 32, 54);
+
 }
 .countainer .weather-box .search-inut-box input::placeholder {
-  color: rgba(5, 33, 57, 0.685);
+  color: rgba(5, 32, 54, 0.685);
 }
 .countainer .weather-box .btn-search {
   font-size: var(--btn-search-font-size);
   padding: 5px 10px;
   border-radius: 30px;
   border: none;
-  color: rgb(3, 19, 32);
+  color: rgb(5, 32, 54);
   background-color: rgba(118, 192, 175, 0.7);
   cursor: pointer;
   transition: all 0.3s;
