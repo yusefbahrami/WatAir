@@ -1,3 +1,24 @@
+:root {
+  --WatAir-title-font-size: 4rem;
+  --search-inut-box-input-font-size: 1.4rem;
+  --btn-search-font-size: 1.3rem;
+  --city-name-font-size: 2.3rem;
+  --description-temprature-font-size: 1.5rem;
+
+  --WatAir-title-font-size-580px: 3rem;
+  --search-inut-box-input-font-size-580px: 1.2rem;
+  --btn-search-font-size-580px: 1rem;
+  --city-name-font-size-580px: 2rem;
+  --description-temprature-font-size-580px: 1.5rem;
+
+  --search-inut-box-input-font-size-430px: 1rem;
+
+  --WatAir-title-font-size-340px: 2.5rem;
+  /* --search-inut-box-input-font-size-340px: 1rem; */
+  /* --btn-search-font-size-340px: 1rem; */
+  --city-name-font-size-340px: 1.5rem;
+  --description-temprature-font-size-340px: 1.2rem;
+}
 * {
   margin: 0;
   padding: 0;
@@ -21,9 +42,9 @@ body {
 }
 
 .countainer .weather-box {
-  width: 100%;
   border-radius: 5%;
-  background-color: red;
+  background-color: rgba(15, 70, 101, 0.9);
+  color: rgb(3, 19, 32);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,11 +57,17 @@ body {
   margin: 10px;
 }
 .countainer .weather-box .WatAir-title {
-  font-size: 4rem;
+  font-size: var(--WatAir-title-font-size);
 }
 .countainer .weather-box .search-inut-box {
   width: 100%;
   height: 50px;
+  background-color: rgba(118, 192, 175, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  /* margin: 10px 0; */
 }
 .countainer .weather-box .search-inut-box input {
   width: 100%;
@@ -48,20 +75,73 @@ body {
   border-radius: 25px;
   border: none;
   outline: none;
-  margin: 10px 0;
   padding: 20px;
-  font-size: 1.3rem;
+  font-size: var(--search-inut-box-input-font-size);
+  background-color: transparent;
+  color: rgb(3, 19, 32);
+}
+.countainer .weather-box .search-inut-box input::placeholder {
+  color: rgba(5, 33, 57, 0.685);
 }
 .countainer .weather-box .btn-search {
-  font-size: 1.3rem;
+  font-size: var(--btn-search-font-size);
   padding: 5px 10px;
   border-radius: 30px;
   border: none;
+  color: rgb(3, 19, 32);
+  background-color: rgba(118, 192, 175, 0.7);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.countainer .weather-box .btn-search:hover {
+  background-color: rgba(15, 70, 101, 1);
+  color: rgba(118, 192, 175, 0.7);
 }
 .countainer .weather-box .city-name {
-  font-size: 2.3rem;
+  font-size: var(--city-name-font-size);
 }
 .countainer .weather-box .weather-description,
-.countainer .weather-box .weather-temprature{
-  font-size: 1.5rem;
+.countainer .weather-box .weather-temprature {
+  font-size: var(--description-temprature-font-size);
+}
+
+@media screen and (max-width: 864px) {
+  .countainer .weather-box {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 580px) {
+  .countainer .weather-box .WatAir-title {
+    font-size: var(--WatAir-title-font-size-580px);
+  }
+  .countainer .weather-box .search-inut-box input {
+    font-size: var(--search-inut-box-input-font-size-580px);
+  }
+  .countainer .weather-box .btn-search {
+    font-size: var(--btn-search-font-size-580px);
+  }
+  .countainer .weather-box .city-name {
+    font-size: var(--city-name-font-size-580px);
+  }
+  .countainer .weather-box .weather-description,
+  .countainer .weather-box .weather-temprature {
+    font-size: var(--description-temprature-font-size-580px);
+  }
+}
+@media screen and (max-width: 430px) {
+  .countainer .weather-box .search-inut-box input {
+    font-size: var(--search-inut-box-input-font-size-430px);
+  }
+}
+@media screen and (max-width: 340px) {
+  .countainer .weather-box .WatAir-title {
+    font-size: var(--WatAir-title-font-size-340px);
+  }
+  .countainer .weather-box .city-name {
+    font-size: var(--city-name-font-size-340px);
+  }
+  .countainer .weather-box .weather-description,
+  .countainer .weather-box .weather-temprature {
+    font-size: var(--description-temprature-font-size-340px);
+  }
 }
